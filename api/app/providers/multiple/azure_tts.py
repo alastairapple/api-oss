@@ -83,8 +83,8 @@ class APIClient:
         files: Dict[str, Any] = None,
         long_timeout: bool = False
     ) -> httpx.Response:
-        # Get region from sub_provider config, default to eastus
-        region = sub_provider.get('region', 'eastus')
+        # Get region from sub_provider config, default to northcentralus
+        region = sub_provider.get('region', 'northcentralus')
         base_url = self.config.base_url.format(region=region)
         
         headers = {
@@ -119,12 +119,12 @@ class APIClient:
         
         # Map OpenAI voices to Azure TTS voices
         voice_mapping = {
-            'alloy': 'en-US-JennyNeural',
-            'echo': 'en-US-GuyNeural',
-            'fable': 'en-US-AriaNeural',
-            'onyx': 'en-US-DavisNeural',
-            'nova': 'en-US-AmberNeural',
-            'shimmer': 'en-US-CoraNeural'
+            'alloy': 'en-US-AlloyTurboMultilingualNeural',
+            'echo': 'en-US-EchoTurboMultilingualNeural',
+            'fable': 'en-US-FableTurboMultilingualNeural',
+            'onyx': 'en-US-OnyxTurboMultilingualNeural',
+            'nova': 'en-US-NovaTurboMultilingualNeural',
+            'shimmer': 'en-US-ShimmerTurboMultilingualNeural'
         }
         
         # Use custom voice if specified in sub_provider
