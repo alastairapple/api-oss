@@ -1041,3 +1041,32 @@ class ModelRegistry(metaclass=ModelRegistryMeta):
         pricing=ModelPricingInfo(price=100),
         endpoint='/v1/embeddings'
     )
+    azure_tts_standard = Model(
+        id='azure-tts-standard',
+        pricing=ModelPricingInfo(price=150),
+        endpoint='/v1/audio/speech',
+        owned_by='microsoft',
+        voices=[
+            'alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer'
+        ]
+    )
+    azure_tts_neural = Model(
+        id='azure-tts-neural',
+        pricing=ModelPricingInfo(price=200),
+        endpoint='/v1/audio/speech',
+        owned_by='microsoft',
+        is_free=False,
+        voices=[
+            'alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer'
+        ]
+    )
+    azure_tts_neural_hd = Model(
+        id='azure-tts-neural-hd',
+        pricing=ModelPricingInfo(price=300),
+        endpoint='/v1/audio/speech',
+        owned_by='microsoft',
+        is_free=False,
+        voices=[
+            'alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer'
+        ]
+    )
