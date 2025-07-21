@@ -410,47 +410,40 @@ class OpenRouter(BaseProvider):
         supports_tool_calling=True,
         supports_real_streaming=True,
         free_models=[
-            'gpt-3.5-turbo',
-            'gpt-4o-mini',
-            'claude-3-haiku',
-            'claude-3.5-haiku',
-            'gemini-1.5-flash-latest',
-            'llama-3.2-3b-instruct',
-            'llama-3.2-11b-instruct',
-            'llama-3.2-90b-instruct',
-            'qwen2.5-72b-instruct',
-            'hermes-2-pro-mistral-7b',
-            'openhermes-2.5-mistral-7b',
-            'toppy-7b',
-            'mythomax-l2-13b'
+            'moonshotai/kimi-k2',
+            'tngtech/deepseek-r1t2-chimera',
+            'mistralai/mistral-small-3.2-24b-instruct',
+            'moonshotai/kimi-dev-72b',
+            'deepseek/deepseek-r1-0528',
+            'qwen/qwen3-30b-a3b',
+            'qwen/qwen3-32b',
+            'qwen/qwen3-235b-a22b',
+            'microsoft/mai-ds-r1',
+            'thudm/glm-z1-32b',
+            'thudm/glm-4-32b',
+            'moonshotai/kimi-vl-a3b-thinking',
+            'nvidia/llama-3.1-nemotron-ultra-253b-v1',
+            'qwen/qwen2.5-vl-32b-instruct',
+            'rekaai/reka-flash-3',
+            'google/gemini-2.0-flash-exp'
         ],
         paid_models=[
-            'gpt-4',
-            'gpt-4-turbo',
-            'gpt-4o',
-            'gpt-4o-2024-11-20',
-            'chatgpt-4o-latest',
-            'o1-mini',
-            'o1-preview',
-            'o1',
-            'claude-3-opus',
-            'claude-3.5-sonnet',
-            'claude-3.5-sonnet-v2',
-            'claude-3.7-sonnet',
-            'gemini-1.5-pro-latest',
-            'gemini-2.0-flash',
-            'gemini-exp-1121',
-            'llama-3.1-405b-instruct',
-            'llama-3.1-70b-instruct',
-            'llama-3.3-70b-instruct',
-            'deepseek-chat',
-            'deepseek-reasoner',
-            'mistral-large',
-            'grok-2-1212',
-            'rogue-rose-103b-v0.2'
+            'google/gemini-2.5-pro',
+            'google/gemini-2.5-flash',
+            'deepseek/deepseek-chat-v3-0324',
+            'x-ai/grok-4',
+            'x-ai/grok-3-mini',
+            'anthropic/claude-sonnet-4',
+            'openai/o4-mini-high',
+            'openai/o1-mini',
+            'openai/gpt-4.1',
+            'openai/gpt-4.1-nano',
+            'openai/gpt-4.1-mini',
+            'openai/gpt-4o-mini-search-preview',
+            'openai/gpt-4o-mini'
         ],
         early_access_models=[
-            'o3-mini'
+            'openai/o3-mini'
         ]
     )
 
@@ -524,3 +517,4 @@ class OpenRouter(BaseProvider):
             return instance.response_handler.create_error_response(
                 traceback.format_exc()
             )
+
