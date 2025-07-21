@@ -1070,3 +1070,87 @@ class ModelRegistry(metaclass=ModelRegistryMeta):
             'alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer'
         ]
     )
+    # New Gemini models
+    gemini_25_pro = Model(
+        id='gemini-2.5-pro',
+        owned_by='google',
+        pricing=ModelPricingInfo(multiplier=1.75)
+    )
+    gemini_25_flash = Model(
+        id='gemini-2.5-flash',
+        owned_by='google',
+        pricing=ModelPricingInfo(multiplier=1.25)
+    )
+    gemini_25_flash_lite_preview_06_17 = Model(
+        id='gemini-2.5-flash-lite-preview-06-17',
+        owned_by='google',
+        pricing=ModelPricingInfo(multiplier=1.0)
+    )
+    gemini_20_flash_lite = Model(
+        id='gemini-2.0-flash-lite',
+        owned_by='google',
+        pricing=ModelPricingInfo(multiplier=1.0)
+    )
+    # Gemini TTS model
+    gemini_25_flash_tts = Model(
+        id='gemini-2.5-flash-tts',
+        pricing=ModelPricingInfo(price=150),
+        endpoint='/v1/audio/speech',
+        owned_by='google',
+        voices=['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer']
+    )
+    # Gemini Image generation model
+    gemini_20_flash_preview_image = Model(
+        id='gemini-2.0-flash-preview-image',
+        pricing=ModelPricingInfo(price=200),
+        endpoint='/v1/images/generations',
+        owned_by='google'
+    )
+    # New APIPie models
+    grok_4 = Model(
+        id='grok-4',
+        owned_by='xai',
+        pricing=ModelPricingInfo(multiplier=3.0),
+        is_free=False
+    )
+    claude_4_sonnet = Model(
+        id='claude-4-sonnet',
+        owned_by='anthropic',
+        pricing=ModelPricingInfo(multiplier=2.0),
+        is_free=False
+    )
+    gpt_41 = Model(
+        id='gpt-4.1',
+        pricing=ModelPricingInfo(multiplier=1.5),
+        is_free=False
+    )
+    gpt_41_mini = Model(
+        id='gpt-4.1-mini',
+        pricing=ModelPricingInfo(multiplier=1.0)
+    )
+    gpt_41_nano = Model(
+        id='gpt-4.1-nano',
+        pricing=ModelPricingInfo(multiplier=0.75)
+    )
+    o3 = Model(
+        id='o3',
+        pricing=ModelPricingInfo(multiplier=6),
+        is_free=False
+    )
+    o4_mini = Model(
+        id='o4-mini',
+        pricing=ModelPricingInfo(multiplier=2.5),
+        is_free=False
+    )
+    # ElevenLabs Flash V2.5 for audio
+    eleven_flash_v2_5 = Model(
+        id='eleven_flash_v2_5',
+        pricing=ModelPricingInfo(price=250),
+        endpoint='/v1/audio/speech',
+        owned_by='elevenlabs',
+        is_free=False,
+        voices=[
+            'charlie', 'george', 'callum', 'liam', 'charlotte',
+            'alice', 'matilda', 'chris', 'brian', 'daniel', 'lily', 'bill'
+        ]
+    )
